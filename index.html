@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //перше завдання;
+     var mass = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+     let sumMass = 0;
+     let amount = 0;
+     for ( let i = 0; i < mass.length; i++){
+     if ( mass[i] > 0){
+        amount += +1; //кількість позитивних елементів;
+        sumMass += mass[i] //сума позитивних елементів;
+     } continue }
+      console.log(`кількість позитивних елементів ${amount}, їх сума ${sumMass} `);
+        //друге завдання;
+        let min = mass[0];
+        let minUn = 0;
+        for ( let i = 0; i < mass.length; i++)
+        { if (mass[i + 1] < min)
+         {min = mass[i+1];
+        minUn = i+1;}
+         continue
+        }
+        console.log(`мінімальний елемент масиву ${min} , його номер ${minUn} `)
+        //третє завдання
+        let max = mass[0];
+        let maxUn = 0;
+        for( let i=0; i < mass.length; i++)
+        { if( mass[i+1] > max)
+        {max = mass[i+1];
+         maxUn = i+1} continue
+       }
+       console.log(`максимальний елемент масиву ${max}, його номер ${maxUn}`)
+       //четверте завдання
+       let negElem = 0;
+       for ( let i=0; i < mass.length; i++)
+       {if (mass[i] < 0)
+        {negElem += +1}//кількість негативних елементів
+       continue}
+        console.log( `кількість негативних елементів ${negElem}`)
+        //п'яте завдання
+        let oddPosElem = 0;
+        for( let i=0; i < mass.length; i++)
+        { if((mass[i] > 0) && (mass[i]% 2!=0))
+        {oddPosElem += +1}//кількість непарних позитивних елементів
+        continue}
+        console.log(`кількість непарних позитивних елементів ${oddPosElem}`)
+        //шосте завдання 
+        let evenPosElem = 0;
+        for( let i = 0; i < mass.length; i++)
+        { if((mass[i] > 0) && ( mass[i]%2 ===0))
+            {evenPosElem += +1}//кількість парних позитивних елементів
+         continue}
+         console.log(`кількість парних позитивних елементів ${evenPosElem}`)
+         //сьоме завдання
+         let sumEven =0;
+         for( let i=0; i < mass.length; i++)
+         {if ( (mass[i] > 0) && (mass[i]%2 ===0))
+        {sumEven += + mass[i]}
+         continue}
+         console.log(`сумма парних позитивних елементів ${sumEven}`)
+         //восьме завдання
+         let sumOdd = 0;
+         for( let i=0; i < mass.length; i++)
+         { if((mass[i] > 0) && (mass[i] % 2 !=0))
+            {sumOdd += +mass[i]} //сума непарних позитивних елементів
+         continue}
+         console.log(`сума непарних позитивних елементів ${sumOdd}`)
+         //дев'яте завдання
+         let prodElem = 1;
+         for ( let i=0; i < mass.length; i++)
+         { if (mass[i] >0)
+        {prodElem = prodElem * mass[i]} //добуток позитиних елементів
+        continue}
+        console.log(`добуток позитивних елементів ${prodElem}`)
+        //
+        let maxEl = mass[0];
+        let n = 0;
+        for( let i=0; i < mass.length; i++)
+        { if( mass[i+1] > maxEl)
+        {maxEl = mass[i+1];// найбільший елемент масиву
+         } continue
+       }
+       console.log(maxEl)
+       for(let i=0; i< mass.length;i++)
+       {if( mass[i] < maxEl)
+       {mass[i] = 0;
+        }
+       else { maxEl = mass[i]}
+       continue}
+       console.log(mass)//виводимо масив
+    </script>
+
+</body>
+</html>
